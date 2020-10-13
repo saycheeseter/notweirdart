@@ -1,0 +1,153 @@
+.page {
+    min-width: 80vw;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container {
+    height: 350px;
+    width: 500px;
+  }
+  .container *,
+  .container *:before,
+  .container *:after {
+    content: "";
+    position: absolute;
+  }
+  .container .background {
+    width: 50%;
+    height: 100%;
+    background: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container .monster {
+    width: 80px;
+    height: 140px;
+    background: #29a2d6;
+    border-radius: 30px;
+  }
+  .container .monster__eyes {
+    width: 30px;
+    height: 60px;
+    background: #d62963;
+    border-radius: 60px;
+    transform: translate(25px, 5px);
+  }
+  .container .monster__eyes-ball {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background: #fff;
+    transform: translate(3px, 5px);
+    transform-origin: top left;
+  }
+  .container .monster__eyes-ball:after {
+    top: 20px;
+    left: 12px;
+    width: 10px;
+    height: 10px;
+    background: #4fe1e3;
+    border-radius: 5px;
+  }
+  .container .monster__mouth {
+    width: 50px;
+    height: 20px;
+    background: #e34f4f;
+    top: 90px;
+    left: 15px;
+    border-radius: 0 0 10px 10px;
+  }
+  .container .monster__mouth-teeth {
+    width: 10px;
+    height: 7px;
+    background: #fff;
+    left: 30px;
+    border-radius: 2px;
+  }
+  .container .monster__mouth-teeth:before {
+    width: 10px;
+    height: 7px;
+    background: #fff;
+    left: -20px;
+    border-radius: 2px;
+  }
+  .container .monster__mouth-teeth:after {
+    width: 10px;
+    height: 7px;
+    background: #fff;
+    left: -10px;
+    top: 13px;
+    border-radius: 2px;
+  }
+  .container .monster .monster__hands {
+    width: 50px;
+    height: 20px;
+    background: #007bff;
+    top: 50px;
+    left: -40px;
+    transform-origin: bottom right;
+    transform: rotate(-20deg);
+    border-radius: 20px;
+    animation: handsMove 2s linear infinite;
+  }
+  .container .monster .monster__hands:after {
+    width: 20px;
+    height: 30px;
+    background: #bdcef5;
+    border-radius: 3px;
+    top: -30px;
+    animation: throwMarsh 2s linear infinite;
+  }
+  .container .monster .monster__hands-right {
+    width: 50px;
+    height: 20px;
+    background: #007bff;
+    top: 50px;
+    left: 80px;
+    transform-origin: bottom right;
+    transform: rotate(-20deg);
+    border-radius: 20px;
+  }
+  .container .monster-feet {
+    width: 60px;
+    height: 20px;
+    background: #0677f9;
+    top: 135px;
+    left: -30px;
+    border-radius: 10px 0 0 0;
+  }
+  .container .monster-feet:after {
+    width: 60px;
+    height: 20px;
+    background: #0677f9;
+    left: 80px;
+    border-radius: 0 10px 0 0;
+  }
+  
+  @keyframes throwMarsh {
+    20% {
+      transform: translate(10px, -20px);
+    }
+    50% {
+      transform: translate(15px, -30px);
+    }
+    100% {
+      transform: translate(10px, -20px);
+    }
+  }
+  @keyframes handsMove {
+    1% {
+      transform: rotate(20deg);
+    }
+    50% {
+      transform: rotate(-20deg);
+    }
+    99% {
+      transform: rotate(20deg);
+    }
+  }
+  
